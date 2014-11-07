@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <title>My App</title>
+        <link rel="stylesheet" href="./css/style.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="./css/new.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="css/fontello/css/fontello.css">
+        <link rel="stylesheet" href="css/fontello/css/animation.css">
+        <link rel="stylesheet" href="css/spinningwheel.css" type="text/css" media="all" />
+        
+        <script defer="" src="cordova.js"></script>
+        <script defer="" src="./js/jquery.js"></script>
+        <script defer="" src="./js/fastclick.js"></script>
+        <script defer="" src="./js/db.js"></script>
+        <script defer="" src="./js/spinner.js"></script>
+        <script defer="" src="./js/app.js"></script>
+        <script defer="" src="./js/login.js"></script>
+        <script defer="" src="./js/categories.js"></script>
+        <script defer="" src="./js/types.js"></script>
+        <script defer="" src="./js/line.js"></script>
+        <script defer="" src="./js/bar.js"></script>
+        <script defer="" src="./js/pie.js"></script>
+        <!--<script defer="" src="./js/pushnotifications.js"></script>-->
+        <script defer="" src="./js/filter.js"></script>
+        <script defer="" src="./js/highcharts.js"></script>
+         <script defer="" src="./js/mail.js"></script>
+        <script type="text/javascript" src="js/spinningwheel-min.js?v=1.4"></script>
+        <!--<script type="text/javascript" src="PushNotification.js"></script>-->
+    </head>
+    <body class="ios7"> <!-- native | ios7 -->
+        <section id="main" class="active">
+            <div class="scrollMask"></div>
+            <div class="scrollWrap">
+                <div class="scroll">
+                    <div class="content">
+                        <div id="login-div">
+                            <input type="text" id="login" class="default" autocapitalize="none" placeholder="User Name" />
+                            <input type="password" id="pass" class="default" placeholder="Password" />
+                            <button id="sign-in" class="default"><b>Login</b><i class="icon-right-open float-right"></i></button>
+                            <button id="btn-login" hidden="hidden" data-vin="categories" data-sd="sl"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="hidden" id="categories">
+            <header>
+                <h1 style="margin-left: 109px; margin-right: 109px;">Categories</h1>
+                <button id="logout" class="right" data-vin="main" data-sd="sr">
+                    <img style="margin-top: 8px;" src="img/logout.png" width="25" />
+                </button>
+            </header>
+            
+            <div class="scrollMask"></div>
+            <div class="scrollWrap">
+                <div class="scroll">
+                    <div class="content">
+                        <ul class="arrowed" id="categories-list">
+                            
+                       </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="hidden" id="types">
+            <header>
+                <button class="left arrow" data-vin="categories" data-sd="sr">
+                    <div class="label">Back</div>
+                </button>
+                <h1 style="margin-left: 109px; margin-right: 109px;">Reports</h1>
+            </header>
+            <div class="scrollMask"></div>
+            <div class="scrollWrap">
+                <div class="scroll">
+                    <div class="content" id="types-list">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="hidden" id="line">
+            <header>
+                <button class="left arrow" data-vin="types" data-sd="sr">
+                    <div class="label">Back</div>
+                </button>
+                <h1 style="margin-left: 109px; margin-right: 109px;"></h1>
+                <button class="right filter-btn" data-vin="line-filter" data-sd="sl">
+                    <img style="margin-top: 8px;" src="img/filter.png" width="25" />
+                </button>
+            </header>
+            
+            <div class="scrollMask"></div>
+            <div class="scrollWrap">
+                <div class="scroll">
+                    <div class="content">
+                        <div id="container"></div>
+                        <div id="info"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="graph-btn nav-active">
+                    <div class="shadow-nav"></div>
+                    <div>
+                        <img src="img/chart.png" width="30" />
+                    </div>
+                    <label><b>Graph</b></label>
+                </div>
+                <div class="details-btn" data-vin="line-details" data-sd="sr">
+                    <div class="shadow-nav"></div>
+                    <div>
+                        <img src="img/table.png" width="30" />
+                    </div>
+                    <label><b>Details</b></label>
+                </div>
+            </div>
+        </section>
+            
+        <section class="hidden" id="line-details">
+            <header>
+                <button class="left arrow" data-vin="types" data-sd="sr">
+                    <div class="label">Back</div>
+                </button>
+                <button style="margin-left: 150px; margin-right: 109px;"  data-vin="mail" data-sd="popin">
+                    <img style="margin-top: 10px;" src="img/mail copy.png" height="25" />
+                </button>
+                <button class="right filter-btn" data-vin="line-filter" data-sd="sl">
+                    <img style="margin-top: 8px;" src="img/filter.png" width="25" />
+                </button>
+            </header>
+            
+            <div class="scrollMask"></div>
+            <div class="scrollWrap">
+                <div class="scroll">
+                    <div class="content">
+                        <table class="details" style="margin-bottom: 70px">
+                            <thead>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <label></label>
+                    </div>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="graph-btn" data-vin="line" data-sd="sl">
+                    <div class="shadow-nav"></div>
+                    <div>
+                        <img src="img/chart.png" width="30" />
+                    </div>
+                    <label><b>Graph</b></label>
+                </div>
+                <div class="details-btn nav-active">
+                    <div class="shadow-nav"></div>
+                    <div>
+                        <img src="img/table.png" width="30" />
+                    </div>
+                    <label><b>Details</b></label>
+                </div>
+            </div>
+        </section>
+        
+        <section class="hidden" id="line-filter">
+            <header>
+                <button class="left bold" data-vin="line" data-sd="sr">
+                    <img style="margin-top: 8px;" src="img/cancel.png" width="25" />
+                </button>
+                <button id="apply-filter" class="right bold" data-vin="line" data-sd="sr">
+                    <img style="margin-top: 8px;" src="img/check.png" width="25" />
+                </button>
+            </header>
+            <div class="scrollMask"></div>
+            <div class="scrollWrap">
+                <div class="scroll">
+                    <div class="content">
+                        <ul id="filters-list">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mail" class="hidden">
+            <header>
+                <button class="left arrow" data-vin="line-details" data-sd="popout">
+                    <div class="label">Back</div>
+                </button>
+                <h1 style="margin-left: 109px; margin-right: 109px;">Mail</h1>
+            </header>
+            <div class="scrollMask"></div>
+            <div class="scrollWrap">
+                <div class="scroll">
+                    <div class="content">
+                        <div id="mail-div">
+                            <input id="mail-from" type="email" class="default" autocapitalize="none" placeholder="@from" />
+                            <input id="mail-to" type="email" class="default" autocapitalize="none" placeholder="@to" />
+                            <input id="mail-subject" type="text" class="default" placeholder="subject" />
+                            <button id="send-mail" class="default"><b>Send</b><i class="icon-right-open float-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div id="shadow">
+            <div id="spinner">
+                <label><b>Loading</b></label>
+            </div>
+        </div>
+</body>
+</html>
