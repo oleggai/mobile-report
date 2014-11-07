@@ -22,6 +22,7 @@ var app = {
         tx.executeSql('DELETE FROM GRAPH_FILTER');
         tx.executeSql('DELETE FROM GRAPH_FILTER_TYPE');
         tx.executeSql('DELETE FROM GRAPH_FILTER_ITEMS');
+        tx.executeSql('DELETE FROM GRAPH_FIELD');
         saveInfo.init();
     },
     
