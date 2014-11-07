@@ -72,10 +72,10 @@ dataBase = {
     },
             
     errorCB: function(err){
-//        alert('ErrorCB');
-//        for(var i in err){
-//            alert(err[i]);
-//        }
+        /*alert('ErrorCB');
+        for(var i in err){
+            alert(err[i]);
+        }*/
         
     },
        
@@ -139,7 +139,7 @@ dataBase = {
         tx.executeSql('SELECT id AS id FROM GRAPH_FILTER', [], parseIDs.parseGFIds, dataBase.errorCB);
         tx.executeSql('SELECT id AS id FROM GRAPH_FILTER_TYPE', [], parseIDs.parseGFTIds, dataBase.errorCB);
         tx.executeSql('SELECT id AS id FROM GRAPH_FILTER_ITEMS', [], parseIDs.parseGFIIds, dataBase.errorCB);
-        tx.executeSql('SELECT id AS id FROM GRAPH_FIELD', [], parseIDs.parseGFieldIIds, dataBase.errorCB);
+        tx.executeSql('SELECT id AS id FROM GRAPH_FIELD', [], parseIDs.parseGFieldIds, dataBase.errorCB);
     },
             
     setVersions: function(tx){
@@ -148,11 +148,11 @@ dataBase = {
         tx.executeSql('SELECT MAX(version) AS version FROM GRAPH_OPTIONS', [], parseVersions.setGOVersion, dataBase.errorCB);
         tx.executeSql('SELECT MAX(version) AS version FROM GRAPH_FILTER', [], parseVersions.setGFVersion, dataBase.errorCB);
         tx.executeSql('SELECT MAX(version) AS version FROM GRAPH_FILTER_TYPE', [], parseVersions.setGFTVersion, dataBase.errorCB);
-        tx.executeSql('SELECT MAX(version) AS version FROM GRAPH_FIELD', [], parseVersions.setGFieldIVersion, dataBase.errorCB);
+        tx.executeSql('SELECT MAX(version) AS version FROM GRAPH_FIELD', [], parseVersions.setGFieldVersion, dataBase.errorCB);
     }
 };
 
-parseIDs = {
+var parseIDs = {
     parseGGIds: function(tx, results) {
         var len = results.rows.length, i = 0;
         GGIds = [0];
@@ -196,6 +196,14 @@ parseIDs = {
     parseGFIIds: function(tx, results) {
         var len = results.rows.length, i = 0;
         GFIIds = [0];
+        for (i; i < len; i++) {
+            GFIIds[i] = results.rows.item(i).id;
+        }
+    },
+
+    parseGFieldIds: function(tx, results) {
+        var len = results.rows.length, i = 0;
+        GFieldIds = [0];
         for (i; i < len; i++) {
             GFIIds[i] = results.rows.item(i).id;
         }
@@ -257,7 +265,17 @@ parseVersions = {
             }
             //alert('graph_filter_items_version = '+graph_filter_items_version);
             //app1.start();
-     }
+     },
+
+    setGFieldVersion: function(tx, results){
+        var len = results.rows.length;
+        for(var i=0; i<len; i++){
+            var m = results.rows.item(i).version;
+            graph_field_version = m ? m : 0;
+        }
+        //alert('graph_field_version = '+ graph_field_version);
+        //app1.start();
+    }
 };
 
 saveInfo = {
@@ -297,6 +315,12 @@ saveInfo = {
             db.transaction(saveInfo.updateGFI, dataBase.errorCB);
         } else {
             db.transaction(selectInfo.selectGFIs, dataBase.errorCB);
+        }
+
+        if(info.graph_field){
+            db.transaction(saveInfo.updateGField, dataBase.errorCB);
+        } else {
+            db.transaction(selectInfo.selectGField, dataBase.errorCB);
         }
     },
             
@@ -600,6 +624,38 @@ saveInfo = {
         });
         
         db.transaction(selectInfo.selectGFIs, dataBase.errorCB);
+    },
+
+    updateGField: function(tx){
+        var sql;
+        info.graph_field.forEach(function(element, index){
+            element.id = parseInt(element.id);
+            if(GFieldIds.indexOf(element.id) != -1){
+                sql = 'UPDATE GRAPH_FIELD SET '+
+                'name = "'+ element.name +'", '+
+                'graph = "'+element.graph+'", '+
+                'length = "'+element.length+'", '+
+                'data_type = "'+element.data_type+'", '+
+                'align = "'+element.align+'", '+
+                'mask = "'+element.mask+'", '+
+                'version = "'+element.version+'", '+
+                'deleted = "'+element.isdeleted+'" '+
+                ' WHERE id='+element.id;
+                //alert('update gfi = ' + sql);
+                tx.executeSql(sql);
+
+            } else {
+                sql = 'INSERT INTO GRAPH_FIELD(id, name, graph, length, data_type, align, mask, version, deleted) ' +
+                'VALUES ('+element.id+',"'+element.name+'",'+element.graph+','+element.length+',"'+element.data_type+'",' +
+                ' "'+element.align+'", "'+element.mask+'",'+element.version+','+element.isdeleted+')';
+                //alert('insert gfi = ' + sql);
+                tx.executeSql(sql);
+
+            }
+
+        });
+
+        db.transaction(selectInfo.selectGField, dataBase.errorCB);
     }
 };
 
@@ -626,6 +682,10 @@ selectInfo = {
             
     selectGFIs: function(tx){
         tx.executeSql('SELECT * FROM GRAPH_FILTER_ITEMS', [], selectInfo.parseGFIs, app.errorCB);
+    },
+
+    selectGField: function(tx){
+        tx.executeSql('SELECT * FROM GRAPH_FIELD', [], selectInfo.parseGField, app.errorCB);
     },
             
     parseGGs: function(tx, results){
@@ -683,9 +743,19 @@ selectInfo = {
             for(i; i<len; i++){
                 info.graph_filter_items[i] = results.rows.item(i);
             }
+        //$.mobile.changePage("#categories");
+     },
+
+    parseGField: function(tx, results){
+        var len = results.rows.length, i = 0;
+//        alert('parse gfi');
+        info.graph_field = [0];
+        for(i; i<len; i++){
+            info.graph_field[i] = results.rows.item(i);
+        }
         infoSelected = true;
         //$.mobile.changePage("#categories");
-     }
+    }
 };
 
 app1 = {

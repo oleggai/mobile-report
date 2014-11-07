@@ -58,7 +58,8 @@ var Logining = function(callback) {
                     go_version: graph_options_version,
                     gf_version: graph_filter_version,
                     gft_version: graph_filter_type_version,
-                    gfi_version: graph_filter_items_version
+                    gfi_version: graph_filter_items_version,
+                    gfield_version: graph_field_version
                 }
             }).done(function(msg) {
                 //alert(msg);
