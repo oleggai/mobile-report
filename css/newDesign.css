@@ -1,0 +1,227 @@
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/bg640x1136.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+body {
+    overflow: auto; /* добавить полосу прокрутки */
+}
+
+.hidden {
+    display: none;
+}
+.active {
+    display: inline-block;
+}
+.section {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+}
+
+#login form {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#login form input {
+    width: 65%;
+    height: 40px;
+    margin-top: 15px;
+    border: 0;
+    font-size: 18px;
+}
+
+#login form input[type="button"] {
+    background-color: #DF3A65 !important;
+    font-size: 18px;
+    width: 80%;
+    color: white;
+    height: 45px !important;
+}
+
+#mail form {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#mail form input {
+    width: 65%;
+    height: 40px;
+    margin-top: 15px;
+    border: 0;
+    font-size: 18px;
+}
+
+#mail form input[type="button"] {
+    background-color: #DF3A65 !important;
+    font-size: 18px;
+    width: 80%;
+    color: white;
+    height: 45px !important;
+}
+
+.elem-list {
+    width: 100%;
+    height: 135px;
+}
+
+.elem-list img {
+    width: 80px;
+    height: 80px;
+    margin-top: 25px;
+}
+
+.elem-list h2 {
+    color: white;
+    float: right;
+    margin-top: 45px;
+}
+
+.orange {
+    background-color: #E6953C;
+}
+
+.ginger {
+    background-color: #EB6453;
+}
+
+.red {
+    background-color: #D3325C;
+}
+
+.purple {
+    background-color: #913060;
+}
+
+.header {
+    width: 100%;
+    border: 1px solid white;
+    text-align: center;
+    background-color: black;
+}
+.header h2 {
+    color: white;
+    line-height: 15px;
+}
+
+.header h2 img {
+    position: absolute;
+    height: 25px;
+    width: 35px;
+    top: 16px;
+    left: 88%;
+}
+
+.header_orders {
+    width: 100%;
+    height: 50px;
+    /*background-image: url('../img/Active_bar_bg.png');*/
+    background: linear-gradient(to top, #21395d, #4e6b97);
+    border-bottom: 1px solid #15243b;
+}
+
+.header_orders div {
+    height: 100%;
+    width: 32.4%;
+    display: inline-block;
+    float: left;
+}
+
+.table-div {
+    width: 100%;
+    min-height: 350px;
+    max-height: 350px;
+    display: block !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.table-header {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to top, #2f496f, #223a5e);
+}
+
+.table-header div {
+    height: 100%;
+    float: left;
+    display: inline-block;
+    border-bottom: 1px solid #354f77;
+    border-right: 1px solid #354f77;
+}
+
+.table-header div:nth-child(1) {
+    width: 40%;
+}
+.table-header div:nth-child(2) {
+    width: 40%;
+}
+.table-header div:nth-child(3) {
+    width: 18%;
+ }
+
+
+
+.table-header div h3 {
+    color: white;
+    position: absolute;
+    top: 42px;
+}
+.bottom-orders {
+    bottom: 0;
+    min-height: 100px;
+}
+
+.bottom-orders div {
+    width: 49%;
+    height: 100px;
+    float: left;
+    display: inline-block;
+    background: linear-gradient(to top, #36517a, #44608b);
+    border: 1px solid #4b6998;
+}
+
+.order-table {
+    width: 100%;
+    height: 30px;
+}
+.order-table div {
+    background: linear-gradient(to top, #36517a, #44608b);
+    border-bottom: 1px solid #354f77;
+    border-right: 1px solid #354f77;
+    height: 50px;
+    display: inline-block;
+    float: left;
+}
+
+.order-table div h4 {
+    color: white;
+    float: left;
+    margin-top: 14px;
+}
+
+.order-table div:nth-child(1) {
+    width: 40%;
+}
+.order-table div:nth-child(2) {
+    width: 40%;
+}
+.order-table div:nth-child(3) {
+    width: 18%;
+}

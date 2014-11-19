@@ -1,0 +1,247 @@
+ body {
+	margin: 0;
+	padding: 0;
+ }
+ 
+ #background 
+{ 
+	 left: 0px; 
+	 top: 0px; 
+	 position: relative; 
+	 margin-left: auto; 
+	 margin-right: auto; 
+	 width: 640px;
+	 height: 1136px; 
+	 overflow: hidden;
+	 z-index:0;
+	} 
+
+ #Columns 
+{ 
+	 left: -150px; 
+	 top: -215px; 
+	 position: absolute; 
+	 width: 940px;
+	 height: 984px;
+	 z-index:1;
+} 
+
+ #bgfff 
+{ 
+	 left: -150px; 
+	 top: -1px; 
+	 position: absolute; 
+	 width: 940px;
+	 height: 1335px;
+	 z-index:2;
+} 
+
+ #bgbig 
+{ 
+	 left: -685px; 
+	 top: 0px; 
+	 position: absolute; 
+	 width: 2009px;
+	 height: 1137px;
+	 z-index:3;
+} 
+
+ #bg640x1136 
+{ 
+	 left: 0px; 
+	 top: 0px; 
+	 position: absolute; 
+	 width: 640px;
+	 height: 1136px;
+	 z-index:4;
+} 
+
+ #headeriphone 
+{ 
+	 left: 0px; 
+	 top: 0px; 
+	 position: absolute; 
+	 width: 640px;
+	 height: 49px;
+	 z-index:5;
+} 
+
+ #LoginInfo 
+{ 
+	 left: 185px; 
+	 top: 234px; 
+	 position: absolute; 
+	 width: 271px;
+	 height: 56px;
+	 z-index:6;
+} 
+
+ #logo 
+{ 
+	 left: 264px; 
+	 top: 84px; 
+	 position: absolute; 
+	 width: 112px;
+	 height: 115px;
+	 z-index:7;
+} 
+
+ #buttonuser 
+{ 
+	 left: 69px; 
+	 top: 356px; 
+	 position: absolute; 
+	 width: 502px;
+	 height: 101px;
+	 z-index:8;
+} 
+
+ #buttonpass 
+{ 
+	 left: 69px; 
+	 top: 494px; 
+	 position: absolute; 
+	 width: 502px;
+	 height: 101px;
+	 z-index:9;
+} 
+
+ #buttonlogin 
+{ 
+	 left: 69px; 
+	 top: 656px; 
+	 position: absolute; 
+	 width: 502px;
+	 height: 101px;
+	 z-index:10;
+} 
+
+ #Login 
+{ 
+	 left: 280px; 
+	 top: 692px; 
+	 position: absolute; 
+	 width: 82px;
+	 height: 33px;
+	 z-index:11;
+} 
+
+ #username 
+{ 
+	 left: 158px; 
+	 top: 403px; 
+	 position: absolute; 
+	 width: 120px;
+	 height: 15px;
+	 z-index:12;
+} 
+
+ #password 
+{ 
+	 left: 161px; 
+	 top: 535px; 
+	 position: absolute; 
+	 width: 113px;
+	 height: 27px;
+	 z-index:13;
+} 
+
+ #CreateAccount 
+{ 
+	 left: 73px; 
+	 top: 795px; 
+	 position: absolute; 
+	 width: 163px;
+	 height: 17px;
+	 z-index:14;
+} 
+
+ #ForgotPassword 
+{ 
+	 left: 387px; 
+	 top: 794px; 
+	 position: absolute; 
+	 width: 182px;
+	 height: 23px;
+	 z-index:15;
+} 
+
+ #or 
+{ 
+	 left: 307px; 
+	 top: 865px; 
+	 position: absolute; 
+	 width: 26px;
+	 height: 15px;
+	 z-index:16;
+} 
+
+ #lineor 
+{ 
+	 left: 70px; 
+	 top: 871px; 
+	 position: absolute; 
+	 width: 500px;
+	 height: 2px;
+	 z-index:17;
+} 
+
+ #user 
+{ 
+	 left: 95px; 
+	 top: 386px; 
+	 position: absolute; 
+	 width: 42px;
+	 height: 48px;
+	 z-index:18;
+} 
+
+ #pass 
+{ 
+	 left: 101px; 
+	 top: 525px; 
+	 position: absolute; 
+	 width: 37px;
+	 height: 48px;
+	 z-index:19;
+} 
+
+ #fb 
+{ 
+	 left: 282px; 
+	 top: 919px; 
+	 position: absolute; 
+	 width: 78px;
+	 height: 78px;
+	 z-index:20;
+} 
+
+ #google 
+{ 
+	 left: 160px; 
+	 top: 919px; 
+	 position: absolute; 
+	 width: 78px;
+	 height: 78px;
+	 z-index:21;
+} 
+
+ #twitter 
+{ 
+	 left: 404px; 
+	 top: 919px; 
+	 position: absolute; 
+	 width: 78px;
+	 height: 78px;
+	 z-index:22;
+} 
+
+ #mouse204 
+{ 
+	 left: 310px; 
+	 top: 985px; 
+	 position: absolute; 
+	 width: 17px;
+	 height: 22px;
+	 z-index:23;
+} 

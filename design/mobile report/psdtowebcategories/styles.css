@@ -1,0 +1,347 @@
+ body {
+	margin: 0;
+	padding: 0;
+ }
+ 
+ #background 
+{ 
+	 left: 0px; 
+	 top: 0px; 
+	 position: relative; 
+	 margin-left: auto; 
+	 margin-right: auto; 
+	 width: 640px;
+	 height: 1136px; 
+	 overflow: hidden;
+	 z-index:0;
+	} 
+
+ #Columns 
+{ 
+	 left: -150px; 
+	 top: -215px; 
+	 position: absolute; 
+	 width: 940px;
+	 height: 984px;
+	 z-index:1;
+} 
+
+ #bgfff 
+{ 
+	 left: -150px; 
+	 top: -1px; 
+	 position: absolute; 
+	 width: 940px;
+	 height: 1335px;
+	 z-index:2;
+} 
+
+ #layer_14 
+{ 
+	 left: -1px; 
+	 top: 168px; 
+	 position: absolute; 
+	 width: 642px;
+	 height: 971px;
+	 z-index:3;
+} 
+
+ #layer_126 
+{ 
+	 left: -1px; 
+	 top: 974px; 
+	 position: absolute; 
+	 width: 162px;
+	 height: 163px;
+	 z-index:4;
+} 
+
+ #layer_21 
+{ 
+	 left: 58px; 
+	 top: 1037px; 
+	 position: absolute; 
+	 width: 48px;
+	 height: 45px;
+	 z-index:5;
+} 
+
+ #layer_127 
+{ 
+	 left: 159px; 
+	 top: 974px; 
+	 position: absolute; 
+	 width: 162px;
+	 height: 163px;
+	 z-index:6;
+} 
+
+ #layer_22 
+{ 
+	 left: 219px; 
+	 top: 1039px; 
+	 position: absolute; 
+	 width: 46px;
+	 height: 46px;
+	 z-index:7;
+} 
+
+ #layer_128 
+{ 
+	 left: 319px; 
+	 top: 974px; 
+	 position: absolute; 
+	 width: 162px;
+	 height: 163px;
+	 z-index:8;
+} 
+
+ #layer_23 
+{ 
+	 left: 380px; 
+	 top: 1039px; 
+	 position: absolute; 
+	 width: 42px;
+	 height: 48px;
+	 z-index:9;
+} 
+
+ #layer_129 
+{ 
+	 left: 479px; 
+	 top: 974px; 
+	 position: absolute; 
+	 width: 162px;
+	 height: 163px;
+	 z-index:10;
+} 
+
+ #exit 
+{ 
+	 left: 541px; 
+	 top: 1042px; 
+	 position: absolute; 
+	 width: 45px;
+	 height: 43px;
+	 z-index:11;
+} 
+
+ #layer_130 
+{ 
+	 left: 477px; 
+	 top: 974px; 
+	 position: absolute; 
+	 width: 4px;
+	 height: 163px;
+	 z-index:12;
+} 
+
+ #layer_131 
+{ 
+	 left: 317px; 
+	 top: 974px; 
+	 position: absolute; 
+	 width: 4px;
+	 height: 163px;
+	 z-index:13;
+} 
+
+ #layer_132 
+{ 
+	 left: 157px; 
+	 top: 974px; 
+	 position: absolute; 
+	 width: 4px;
+	 height: 163px;
+	 z-index:14;
+} 
+
+ #layer_122 
+{ 
+	 left: -1px; 
+	 top: 168px; 
+	 position: absolute; 
+	 width: 642px;
+	 height: 205px;
+	 z-index:15;
+} 
+
+ #layer_123 
+{ 
+	 left: -1px; 
+	 top: 370px; 
+	 position: absolute; 
+	 width: 642px;
+	 height: 204px;
+	 z-index:16;
+} 
+
+ #layer_112 
+{ 
+	 left: -1px; 
+	 top: 772px; 
+	 position: absolute; 
+	 width: 642px;
+	 height: 205px;
+	 z-index:17;
+} 
+
+ #layer_125 
+{ 
+	 left: -1px; 
+	 top: 571px; 
+	 position: absolute; 
+	 width: 642px;
+	 height: 204px;
+	 z-index:18;
+} 
+
+ #CariHesap 
+{ 
+	 left: 373px; 
+	 top: 254px; 
+	 position: absolute; 
+	 width: 227px;
+	 height: 45px;
+	 z-index:19;
+} 
+
+ #Kasa 
+{ 
+	 left: 507px; 
+	 top: 466px; 
+	 position: absolute; 
+	 width: 93px;
+	 height: 34px;
+	 z-index:20;
+} 
+
+ #Banka 
+{ 
+	 left: 479px; 
+	 top: 659px; 
+	 position: absolute; 
+	 width: 124px;
+	 height: 35px;
+	 z-index:21;
+} 
+
+ #CekveSenet 
+{ 
+	 left: 331px; 
+	 top: 865px; 
+	 position: absolute; 
+	 width: 276px;
+	 height: 35px;
+	 z-index:22;
+} 
+
+ #icncekvesenet 
+{ 
+	 left: 23px; 
+	 top: 818px; 
+	 position: absolute; 
+	 width: 117px;
+	 height: 117px;
+	 z-index:23;
+} 
+
+ #iconbanka 
+{ 
+	 left: 23px; 
+	 top: 614px; 
+	 position: absolute; 
+	 width: 117px;
+	 height: 117px;
+	 z-index:24;
+} 
+
+ #iconcasa 
+{ 
+	 left: 23px; 
+	 top: 418px; 
+	 position: absolute; 
+	 width: 117px;
+	 height: 117px;
+	 z-index:25;
+} 
+
+ #iconcarihesap 
+{ 
+	 left: 23px; 
+	 top: 214px; 
+	 position: absolute; 
+	 width: 117px;
+	 height: 117px;
+	 z-index:26;
+} 
+
+ #headeriphone 
+{ 
+	 left: 0px; 
+	 top: 0px; 
+	 position: absolute; 
+	 width: 640px;
+	 height: 49px;
+	 z-index:27;
+} 
+
+ #mouse205 
+{ 
+	 left: 227px; 
+	 top: 481px; 
+	 position: absolute; 
+	 width: 104px;
+	 height: 633px;
+	 z-index:28;
+} 
+
+ #layer_17 
+{ 
+	 left: -1px; 
+	 top: 47px; 
+	 position: absolute; 
+	 width: 642px;
+	 height: 123px;
+	 z-index:29;
+} 
+
+ #1pxyelloy 
+{ 
+	 left: -1px; 
+	 top: 47px; 
+	 position: absolute; 
+	 width: 642px;
+	 height: 4px;
+	 z-index:30;
+} 
+
+ #1pxyelloy_0 
+{ 
+	 left: -1px; 
+	 top: 167px; 
+	 position: absolute; 
+	 width: 642px;
+	 height: 4px;
+	 z-index:31;
+} 
+
+ #Categories 
+{ 
+	 left: 232px; 
+	 top: 97px; 
+	 position: absolute; 
+	 width: 169px;
+	 height: 33px;
+	 z-index:32;
+} 
+
+ #menu 
+{ 
+	 left: 539px; 
+	 top: 92px; 
+	 position: absolute; 
+	 width: 61px;
+	 height: 39px;
+	 z-index:33;
+} 
