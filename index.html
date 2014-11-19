@@ -1,184 +1,205 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-        <title>My App</title>
-<!--        <link rel="stylesheet" href="./css/style.css" type="text/css" media="screen">
-        <link rel="stylesheet" href="./css/new.css" type="text/css" media="screen">-->
-        <link rel="stylesheet" href="css/fontello/css/fontello.css">
-        <link rel="stylesheet" href="css/fontello/css/animation.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>My App</title>
+    <!--        <link rel="stylesheet" href="./css/style.css" type="text/css" media="screen">
+            <link rel="stylesheet" href="./css/new.css" type="text/css" media="screen">-->
+    <link rel="stylesheet" href="css/fontello/css/fontello.css">
+    <link rel="stylesheet" href="css/fontello/css/animation.css">
 
-        <link rel="stylesheet" href="css/newDesign.css">
+    <link rel="stylesheet" href="css/newDesign.css">
 
-        <script defer="" src="cordova.js"></script>
-        <script defer="" src="./js/jquery.js"></script>
-        <script defer="" src="./js/fastclick.js"></script>
-        <script defer="" src="./js/db.js"></script>
-        <script defer="" src="./js/spinner.js"></script>
-        <script defer="" src="./js/app.js"></script>
-        <script defer="" src="./js/login.js"></script>
-        <script defer="" src="./js/categories.js"></script>
-        <script defer="" src="./js/types.js"></script>
-        <script defer="" src="./js/line.js"></script>
-        <script defer="" src="./js/bar.js"></script>
-        <script defer="" src="./js/pie.js"></script>
-        <!--<script defer="" src="./js/pushnotifications.js"></script>-->
-        <script defer="" src="./js/filter.js"></script>
-        <script defer="" src="./js/highcharts.js"></script>
-         <script defer="" src="./js/mail.js"></script>
-        <script type="text/javascript" src="js/spinningwheel-min.js?v=1.4"></script>
-        <!--<script type="text/javascript" src="PushNotification.js"></script>-->
-    </head>
+    <script defer="" src="cordova.js"></script>
+    <script defer="" src="./js/jquery.js"></script>
+    <script defer="" src="./js/fastclick.js"></script>
+    <script defer="" src="./js/db.js"></script>
+    <script defer="" src="./js/spinner.js"></script>
+    <script defer="" src="./js/app.js"></script>
+    <script defer="" src="./js/login.js"></script>
+    <script defer="" src="./js/categories.js"></script>
+    <script defer="" src="./js/types.js"></script>
+    <script defer="" src="./js/line.js"></script>
+    <script defer="" src="./js/bar.js"></script>
+    <script defer="" src="./js/pie.js"></script>
+    <!--<script defer="" src="./js/pushnotifications.js"></script>-->
+    <script defer="" src="./js/filter.js"></script>
+    <script defer="" src="./js/highcharts.js"></script>
+    <script defer="" src="./js/mail.js"></script>
+    <script type="text/javascript" src="js/spinningwheel-min.js?v=1.4"></script>
+    <!--<script type="text/javascript" src="PushNotification.js"></script>-->
+</head>
 <body> <!-- native | ios7 -->
 
 
-    <div class="section hidden" id="login" style="">
-        <div style="width: 100%; /*display: inline-block;*/ text-align: center;">
-            <img src="img/logo1.png">
-            <h2 style="color: white;">Login Info</h2>
-        </div>
-        <form>
-            <input type="text" style="padding-left: 15%; background: url('img/user.png') no-repeat 5px 6px , #C8CFD9; background-size: 30px 30px" placeholder="username"><br>
-            <input type="text" style="padding-left: 15%; background: url('img/pass.png') no-repeat  5px 6px , #C8CFD9; background-size: 30px 30px" placeholder="password"><br>
-            <input type="button" value="Login">
-        </form>
+<div class="section hidden" id="login" style="">
+    <div style="width: 100%; /*display: inline-block;*/ text-align: center;">
+        <img src="img/logo1.png">
 
+        <h2 style="color: white;">Login Info</h2>
     </div>
+    <form>
+        <input type="text"
+               style="padding-left: 15%; background: url('img/user.png') no-repeat 5px 6px , #C8CFD9; background-size: 30px 30px"
+               placeholder="username"><br>
+        <input type="text"
+               style="padding-left: 15%; background: url('img/pass.png') no-repeat  5px 6px , #C8CFD9; background-size: 30px 30px"
+               placeholder="password"><br>
+        <input type="button" value="Login">
+    </form>
+
+</div>
 
 
-    <div class="section hidden" id="categories" >
+<div class="section active" id="categories">
     <div class="header">
         <h2>Categories <img src="img/logout.png"></h2>
     </div>
     <div class="list" style="width: 100%;">
         <div class="elem-list orange">
             <img src="img/icncekvesenet.png">
+
             <h2>Category1</h2>
         </div>
         <div class="elem-list ginger">
             <img src="img/iconbanka.png">
+
             <h2>Category2</h2>
         </div>
         <div class="elem-list red">
             <img src="img/iconcasa.png">
+
             <h2>Category3</h2>
         </div>
         <div class="elem-list purple">
             <img src="img/iconcarihesap.png">
+
             <h2>Category4</h2>
         </div>
     </div>
 </div>
 
 
-    <div class="section hidden" id="mail" style="">
-<!--    <div class="header">
-        <h2>Mail <img src="img/logout.png"></h2>
-    </div>-->
+<div class="section hidden" id="mail" style="">
+    <!--    <div class="header">
+            <h2>Mail <img src="img/logout.png"></h2>
+        </div>-->
     <div style="height: 50px; width: 100%; background: #2C456B; border: 1px solid;"></div>
     <form>
-        <input type="text" style="padding-left: 15%; background: url('img/layer_22.png') no-repeat 5px 6px , #C8CFD9; background-size: 30px 30px" placeholder="from"><br>
-        <input type="text" style="padding-left: 15%; background: url('img/layer_22.png') no-repeat  5px 6px , #C8CFD9; background-size: 30px 30px" placeholder="to"><br>
+        <input type="text"
+               style="padding-left: 15%; background: url('img/layer_22.png') no-repeat 5px 6px , #C8CFD9; background-size: 30px 30px"
+               placeholder="from"><br>
+        <input type="text"
+               style="padding-left: 15%; background: url('img/layer_22.png') no-repeat  5px 6px , #C8CFD9; background-size: 30px 30px"
+               placeholder="to"><br>
         <input type="text" style="padding-left: 5%; width: 75%;  background:  #C8CFD9;" placeholder="subject"><br>
         <input type="button" value="Login">
     </form>
 
 </div>
 
-    <div class="section active" id="orders">
-        <div class="header_orders">
-            <div>
-                <img src="img/back.png" style="width: 35px; height: 37px; float: left; position: absolute; top: 7px;">
-                <h3 style="color: white; float: right; position: absolute; top: -5px; left: 16%">Back</h3>
-            </div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="table-header">
-            <div><h3 style="margin-left: 5px;">Date</h3></div>
-            <div><h3 style="margin-left: 5px;">Sum</h3></div>
-            <div><h3 style="margin-left: 5px;">Sum</h3></div>
-        </div>
-        <div class="table-div">
-            <div class="order-table">
-                <div><h4 >Record 1</h4></div>
-                <div><h4>Record 2</h4></div>
-                <div><h4>10</h4></div>
-            </div>
-            <div class="order-table">
-                <div><h4 >Record 1</h4></div>
-                <div><h4>Record 2</h4></div>
-                <div><h4>10</h4></div>
-            </div>
-            <div class="order-table">
-                <div><h4 >Record 1</h4></div>
-                <div><h4>Record 2</h4></div>
-                <div><h4>10</h4></div>
-                <div class="order-table">
-                    <div><h4 >Record 1</h4></div>
-                    <div><h4>Record 2</h4></div>
-                    <div><h4>10</h4></div>
-                </div>
-                <div class="order-table">
-                    <div><h4 >Record 1</h4></div>
-                    <div><h4>Record 2</h4></div>
-                    <div><h4>10</h4></div>
-                </div>
-                <div class="order-table">
-                    <div><h4 >Record 1</h4></div>
-                    <div><h4>Record 2</h4></div>
-                    <div><h4>10</h4></div>
-                </div>
-                <div class="order-table">
-                    <div><h4 >Record 1</h4></div>
-                    <div><h4>Record 2</h4></div>
-                    <div><h4>10</h4></div>
-                </div>
-                <div class="order-table">
-                    <div><h4 >Record 1</h4></div>
-                    <div><h4>Record 2</h4></div>
-                    <div><h4>10</h4></div>
-                </div>
-                <div class="order-table">
-                    <div><h4 >Record 1</h4></div>
-                    <div><h4>Record 2</h4></div>
-                    <div><h4>10</h4></div>
-                </div>
-                <div class="order-table">
-                    <div><h4 >Record 1</h4></div>
-                    <div><h4>Record 2</h4></div>
-                    <div><h4>10</h4></div>
-                </div>
-                <div class="order-table">
-                    <div><h4 >Record 1</h4></div>
-                    <div><h4>Record 2</h4></div>
-                    <div><h4>10</h4></div>
-                </div>
-                <div class="order-table">
-                    <div><h4 >Record 1</h4></div>
-                    <div><h4>Record 2</h4></div>
-                    <div><h4>10</h4></div>
-                </div>
-                <div class="order-table">
-                    <div><h4 >Record 1</h4></div>
-                    <div><h4>Record 2</h4></div>
-                    <div><h4>10</h4></div>
-                </div>
-            </div>
-        </div>
+<div class="section hidden" id="orders">
+    <div class="header_orders">
+        <div>
+            <img src="img/back.png" style="width: 35px; height: 37px; float: left; position: absolute; top: 7px;">
 
-        <div class="bottom-orders">
-            <div>
-                <img src="img/Graph%20Icon.png" style="float: left; width: 27px; height: 27px; position: absolute; margin-top: 43px; left: 10%;">
-                <h3 style="float: right; margin-top: 43px; margin-left: 22%; position: absolute; color: white;">Graph</h3>
-            </div>
-            <div>
-                <img src="img/Detail%20icon.png" style="float: left; width: 27px; height: 27px; position: absolute; margin-top: 43px; left: 60%;">
-                <h3 style="float: right; margin-top: 43px; margin-left: 22%; position: absolute; color: white;">Details</h3>
-            </div>
+            <h3 style="color: white; float: right; position: absolute; top: -5px; left: 16%">Back</h3>
         </div>
-
+        <div></div>
+        <div></div>
     </div>
+    <div class="table-header">
+        <div><h3 style="margin-left: 5px;">Date</h3></div>
+        <div><h3 style="margin-left: 5px;">Sum</h3></div>
+        <div><h3 style="margin-left: 5px;">Sum</h3></div>
+    </div>
+    <div class="table-div">
+        <div class="order-table">
+            <div><h4>Record 1</h4></div>
+            <div><h4>Record 2</h4></div>
+            <div><h4>10</h4></div>
+        </div>
+        <div class="order-table">
+            <div><h4>Record 1</h4></div>
+            <div><h4>Record 2</h4></div>
+            <div><h4>10</h4></div>
+        </div>
+        <div class="order-table">
+            <div><h4>Record 1</h4></div>
+            <div><h4>Record 2</h4></div>
+            <div><h4>10</h4></div>
+            <div class="order-table">
+                <div><h4>Record 1</h4></div>
+                <div><h4>Record 2</h4></div>
+                <div><h4>10</h4></div>
+            </div>
+            <div class="order-table">
+                <div><h4>Record 1</h4></div>
+                <div><h4>Record 2</h4></div>
+                <div><h4>10</h4></div>
+            </div>
+            <div class="order-table">
+                <div><h4>Record 1</h4></div>
+                <div><h4>Record 2</h4></div>
+                <div><h4>10</h4></div>
+            </div>
+            <div class="order-table">
+                <div><h4>Record 1</h4></div>
+                <div><h4>Record 2</h4></div>
+                <div><h4>10</h4></div>
+            </div>
+            <div class="order-table">
+                <div><h4>Record 1</h4></div>
+                <div><h4>Record 2</h4></div>
+                <div><h4>10</h4></div>
+            </div>
+            <div class="order-table">
+                <div><h4>Record 1</h4></div>
+                <div><h4>Record 2</h4></div>
+                <div><h4>10</h4></div>
+            </div>
+            <div class="order-table">
+                <div><h4>Record 1</h4></div>
+                <div><h4>Record 2</h4></div>
+                <div><h4>10</h4></div>
+            </div>
+            <div class="order-table">
+                <div><h4>Record 1</h4></div>
+                <div><h4>Record 2</h4></div>
+                <div><h4>10</h4></div>
+            </div>
+            <div class="order-table">
+                <div><h4>Record 1</h4></div>
+                <div><h4>Record 2</h4></div>
+                <div><h4>10</h4></div>
+            </div>
+            <div class="order-table">
+                <div><h4>Record 1</h4></div>
+                <div><h4>Record 2</h4></div>
+                <div><h4>10</h4></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-orders">
+        <div>
+            <img src="img/Graph%20Icon.png"
+                 style="float: left; width: 27px; height: 27px; position: absolute; margin-top: 43px; left: 10%;">
+
+            <h3 style="float: right; margin-top: 43px; margin-left: 22%; position: absolute; color: white;">Graph</h3>
+        </div>
+        <div>
+            <img src="img/Detail%20icon.png"
+                 style="float: left; width: 27px; height: 27px; position: absolute; margin-top: 43px; left: 60%;">
+
+            <h3 style="float: right; margin-top: 43px; margin-left: 22%; position: absolute; color: white;">Details</h3>
+        </div>
+    </div>
+
+</div>
 </body>
 </html>
