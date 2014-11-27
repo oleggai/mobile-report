@@ -32,11 +32,21 @@
     <script defer="" src="./js/mail.js"></script>
     <script type="text/javascript" src="js/spinningwheel-min.js?v=1.4"></script>
     <!--<script type="text/javascript" src="PushNotification.js"></script>-->
+
+    <script type="text/javascript" src="js/modules/jquery.mobile.custom.min.js"></script>
+    <script type="text/javascript" src="js/modules/jquery-ui.min.js"></script>
+
+    <script defer="" src="./js/navigation.js"></script>
+
+
 </head>
 <body> <!-- native | ios7 -->
 
 
-<div class="section hidden" id="login" style="">
+<div class="section hidden" id="login" style="background-image: url(img/bg640x1136.png);-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;">
     <div style="width: 100%; /*display: inline-block;*/ text-align: center;">
         <img src="img/logo1.png">
 
@@ -49,17 +59,20 @@
         <input type="text"
                style="padding-left: 15%; background: url('img/pass.png') no-repeat  5px 6px , #C8CFD9; background-size: 30px 30px"
                placeholder="password"><br>
-        <input type="button" value="Login">
+        <input type="button" value="Login" id="button-login">
     </form>
 
 </div>
 
 
-<div class="section active" id="categories">
+<div class="section hidden" id="categories" style="background-image: url(img/bg640x1136.png);-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;">
     <div class="header">
-        <h2>Categories <img src="img/logout.png"></h2>
+        <h2>Categories <img src="img/logout.png" id="categories-img"></h2>
     </div>
-    <div class="list" style="width: 100%;">
+    <div class="list" style="width: 100%; margin-top: 60px;">
         <div class="elem-list orange">
             <img src="img/icncekvesenet.png">
 
@@ -84,12 +97,23 @@
 </div>
 
 
-<div class="section hidden" id="mail" style="">
+<div class="section hidden" id="mail" style="background-image: url(img/bg640x1136.png);-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;">
     <!--    <div class="header">
             <h2>Mail <img src="img/logout.png"></h2>
         </div>-->
-    <div style="height: 50px; width: 100%; background: #2C456B; border: 1px solid;"></div>
-    <form>
+    <!--<div style="height: 50px; width: 100%; background: #2C456B; border: 1px solid;"></div>-->
+    <div class="header_orders" style="position: fixed; z-index: 1; margin: 0;">
+        <div id="back-mail">
+            <img src="img/back.png" style="width: 35px; height: 37px; float: left; position: absolute; top: 7px;">
+
+            <h3 style="color: white; float: right; position: absolute; top: -5px; left: 16%">Back</h3>
+        </div>
+
+    </div>
+    <form style="margin-top: 50px;">
         <input type="text"
                style="padding-left: 15%; background: url('img/layer_22.png') no-repeat 5px 6px , #C8CFD9; background-size: 30px 30px"
                placeholder="from"><br>
@@ -102,22 +126,33 @@
 
 </div>
 
-<div class="section hidden" id="orders">
-    <div class="header_orders">
-        <div>
+<div class="section hidden" id="orders" style="background-image: url(img/bg640x1136.png);-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;">
+    <div class="header_orders" style="position: fixed; z-index: 1; margin: 0;">
+        <div id="back-orders">
             <img src="img/back.png" style="width: 35px; height: 37px; float: left; position: absolute; top: 7px;">
 
             <h3 style="color: white; float: right; position: absolute; top: -5px; left: 16%">Back</h3>
         </div>
-        <div></div>
-        <div></div>
+        <div id="mail-orders">
+            <img src="img/mail%20copy.png" style="width: 38px; height: 27px; float: left; position: absolute; left: 40%; top: 12px;">
+
+            <h3 style="color: white; float: right; position: absolute; top: -5px; left: 52%">Mail</h3>
+        </div>
+        <div id="filter-orders">
+            <!--<img src="img/mail%20copy.png" style="width: 38px; height: 27px; float: left; position: absolute; left: 40%; top: 12px;">-->
+
+            <h3 style="color: white; float: right; position: absolute; top: -5px; left: 82%">Filter</h3>
+        </div>
     </div>
-    <div class="table-header">
+    <div class="table-header" style="">
         <div><h3 style="margin-left: 5px;">Date</h3></div>
         <div><h3 style="margin-left: 5px;">Sum</h3></div>
         <div><h3 style="margin-left: 5px;">Sum</h3></div>
     </div>
-    <div class="table-div">
+    <div class="table-div" style="margin-top: 60px;">
         <div class="order-table">
             <div><h4>Record 1</h4></div>
             <div><h4>Record 2</h4></div>
@@ -132,61 +167,66 @@
             <div><h4>Record 1</h4></div>
             <div><h4>Record 2</h4></div>
             <div><h4>10</h4></div>
-            <div class="order-table">
-                <div><h4>Record 1</h4></div>
-                <div><h4>Record 2</h4></div>
-                <div><h4>10</h4></div>
-            </div>
-            <div class="order-table">
-                <div><h4>Record 1</h4></div>
-                <div><h4>Record 2</h4></div>
-                <div><h4>10</h4></div>
-            </div>
-            <div class="order-table">
-                <div><h4>Record 1</h4></div>
-                <div><h4>Record 2</h4></div>
-                <div><h4>10</h4></div>
-            </div>
-            <div class="order-table">
-                <div><h4>Record 1</h4></div>
-                <div><h4>Record 2</h4></div>
-                <div><h4>10</h4></div>
-            </div>
-            <div class="order-table">
-                <div><h4>Record 1</h4></div>
-                <div><h4>Record 2</h4></div>
-                <div><h4>10</h4></div>
-            </div>
-            <div class="order-table">
-                <div><h4>Record 1</h4></div>
-                <div><h4>Record 2</h4></div>
-                <div><h4>10</h4></div>
-            </div>
-            <div class="order-table">
-                <div><h4>Record 1</h4></div>
-                <div><h4>Record 2</h4></div>
-                <div><h4>10</h4></div>
-            </div>
-            <div class="order-table">
-                <div><h4>Record 1</h4></div>
-                <div><h4>Record 2</h4></div>
-                <div><h4>10</h4></div>
-            </div>
-            <div class="order-table">
-                <div><h4>Record 1</h4></div>
-                <div><h4>Record 2</h4></div>
-                <div><h4>10</h4></div>
-            </div>
-            <div class="order-table">
-                <div><h4>Record 1</h4></div>
-                <div><h4>Record 2</h4></div>
-                <div><h4>10</h4></div>
-            </div>
+        </div>
+        <div class="order-table">
+            <div><h4>Record 1</h4></div>
+            <div><h4>Record 2</h4></div>
+            <div><h4>10</h4></div>
+        </div>
+        <div class="order-table">
+            <div><h4>Record 1</h4></div>
+            <div><h4>Record 2</h4></div>
+            <div><h4>10</h4></div>
+        </div>
+        <div class="order-table">
+            <div><h4>Record 1</h4></div>
+            <div><h4>Record 2</h4></div>
+            <div><h4>10</h4></div>
+        </div>
+        <div class="order-table">
+            <div><h4>Record 1</h4></div>
+            <div><h4>Record 2</h4></div>
+            <div><h4>10</h4></div>
+        </div>
+        <div class="order-table">
+            <div><h4>Record 1</h4></div>
+            <div><h4>Record 2</h4></div>
+            <div><h4>10</h4></div>
+        </div>
+        <div class="order-table">
+            <div><h4>Record 1</h4></div>
+            <div><h4>Record 2</h4></div>
+            <div><h4>10</h4></div>
+        </div>
+        <div class="order-table">
+            <div><h4>Record 1</h4></div>
+            <div><h4>Record 2</h4></div>
+            <div><h4>10</h4></div>
+        </div>
+        <div class="order-table">
+            <div><h4>Record 1</h4></div>
+            <div><h4>Record 2</h4></div>
+            <div><h4>10</h4></div>
+        </div>
+        <div class="order-table">
+            <div><h4>Record 1</h4></div>
+            <div><h4>Record 2</h4></div>
+            <div><h4>10</h4></div>
+        </div>
+        <div class="order-table">
+            <div><h4>Record 1</h4></div>
+            <div><h4>Record 2</h4></div>
+            <div><h4>10</h4></div>
+        </div>
+        <div class="order-table">
+            <div><h4>Record 1</h4></div>
+            <div><h4>Record 2</h4></div>
+            <div><h4>10</h4></div>
         </div>
     </div>
 
-    <div class="bottom-orders">
-        <div>
+    <div class="bottom-orders" style="position: fixed; width: 100%;">
+        <div id="orders-graph" style="border-right: 1px solid #808080;">
             <img src="img/Graph%20Icon.png"
                  style="float: left; width: 27px; height: 27px; position: absolute; margin-top: 43px; left: 10%;">
 
@@ -201,5 +241,186 @@
     </div>
 
 </div>
+
+<div class="section active" id="filter" style="background-image: url(img/bg640x1136.png);-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;">
+    <div class="header_orders">
+        <div id="cross-filter">
+            <img src="img/cross.png" style="width: 20px; height: 20px; float: left; position: absolute; top: 15px; left: 10px;">
+        </div>
+        <div></div>
+        <div>
+            <img src="img/tick.png" style="width: 20px; height: 20px; float: right; position: absolute; top: 15px; left: 85%;">
+        </div>
+    </div>
+    <div class="filter-table-header">
+        <div><h3 style="margin-left: 5px;">Filter</h3></div>
+        <div><h3 style="margin-left: 5px;">Type</h3></div>
+    </div>
+    <div class="filter-table-div">
+
+            <div class="filter-table">
+                <div><h4>Record 1</h4></div>
+                <div><h4>Record 2</h4></div>
+            </div>
+            <div class="filter-table">
+                <div><h4>Record 3</h4></div>
+                <div><h4>Record 4</h4></div>
+            </div>
+        <div class="filter-table">
+            <div><h4>Record 5</h4></div>
+            <div><h4>Record 6</h4></div>
+        </div>
+        <div class="filter-table">
+            <div><h4>Record 7</h4></div>
+            <div><h4>Record 8</h4></div>
+        </div>
+        <div class="filter-table">
+            <div><h4>Record 9</h4></div>
+            <div><h4>Record 10</h4></div>
+        </div>
+        <div class="filter-table">
+            <div><h4>Record 11</h4></div>
+            <div><h4>Record 12</h4></div>
+        </div>
+        <div class="filter-table">
+            <div><h4>Record 13</h4></div>
+            <div><h4>Record 14</h4></div>
+        </div>
+
+
+    </div>
+<div id="div-filter" style="width: 100%; height: 300px; position: absolute; display: none; bottom: 0; background-image: url(img/bg640x1136.png);-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;">
+    <div class="bottom-filters" >
+        <div class="border-radius">
+            <div class="filter-button border-radius-left" style="border-right: 1px solid #354f77;" id="prev">
+                <h4>Previous</h4>
+            </div>
+            <div class="filter-button border-radius-right" id="next">
+                <h4>Next</h4>
+            </div>
+        </div>
+        <div class="border-radius">
+            <div class="filter-button border-radius-left" style="border-right: 1px solid #354f77;">
+                <h4>Clear</h4>
+            </div>
+            <div class="filter-button border-radius-right">
+                <h4>Done</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="div-date">
+        <div class="div-date-record">
+            <div style = "border-right: 1px solid white;">16</div>
+            <div style = "border-right: 1px solid white;">April</div>
+            <div>2014</div>
+        </div>
+        <div class="div-date-record">
+            <div style = "border-right: 1px solid white;">17</div>
+            <div style = "border-right: 1px solid white;">May</div>
+            <div>2014</div>
+        </div>
+        <div class="div-date-record">
+            <div style = "border-right: 1px solid white;">18</div>
+            <div style = "border-right: 1px solid white;">June</div>
+            <div>2014</div>
+        </div>
+        <div class="div-date-record">
+            <div style = "border-right: 1px solid white;">19</div>
+            <div style = "border-right: 1px solid white;">July</div>
+            <div>2014</div>
+        </div>
+        <div class="div-date-record">
+            <div style = "border-right: 1px solid white;">16</div>
+            <div style = "border-right: 1px solid white;">April</div>
+            <div>2014</div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="section hidden" id="groups" style="background-image: url(img/bg640x1136.png);-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;">
+    <div class="header_orders" style="position: fixed; z-index: 1; margin: 0;">
+        <div id="back-groups">
+            <img src="img/back.png" style="width: 35px; height: 37px; float: left; position: absolute; top: 7px;">
+
+            <h3 style="color: white; float: right; position: absolute; top: -5px; left: 16%">Back</h3>
+        </div>
+        <div>
+        </div>
+        <div></div>
+    </div>
+    <div style="width: 100%; height: 100%; margin-top: 60px;">
+        <div class="category">
+            <img src="img/month.png">
+            <h4 style="color: white;">Category 1</h4>
+        </div>
+        <div class="category">
+            <img src="img/week.png">
+            <h4 style="color: white;">Category 2</h4>
+        </div>
+        <div class="category">
+            <img src="img/week.png">
+            <h4 style="color: white;">Category 3</h4>
+        </div>
+        <div class="category">
+            <img src="img/month.png">
+            <h4 style="color: white;">Category 4</h4>
+        </div>
+    </div>
+</div>
+
+<div class="section hidden" id="graph" style="background-image: url(img/bg640x1136.png);-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;">
+    <div class="header_orders" style="position: fixed; z-index: 1; margin: 0;">
+        <div id="back-graph">
+            <img src="img/back.png" style="width: 35px; height: 37px; float: left; position: absolute; top: 7px;">
+
+            <h3 style="color: white; float: right; position: absolute; top: -5px; left: 16%">Back</h3>
+        </div>
+        <div id="mail-graph">
+            <img src="img/mail%20copy.png" style="width: 38px; height: 27px; float: left; position: absolute; left: 40%; top: 12px;">
+
+            <h3 style="color: white; float: right; position: absolute; top: -5px; left: 52%">Mail</h3>
+        </div>
+        <div id="filter-graph">
+            <!--<img src="img/mail%20copy.png" style="width: 38px; height: 27px; float: left; position: absolute; left: 40%; top: 12px;">-->
+
+            <h3 style="color: white; float: right; position: absolute; top: -5px; left: 82%">Filter</h3>
+        </div>
+    </div>
+
+    <div class="table-div" style="margin-top: 60px; border: 1px solid red; min-height: 300px;">
+     </div>
+
+
+    <div class="bottom-orders" style="position: fixed; width: 100%;">
+        <div style="border-right: 1px solid #808080; background: linear-gradient(to bottom, #36517a, #44608b) !important;">
+            <img src="img/Graph%20Icon.png"
+                 style="float: left; width: 27px; height: 27px; position: absolute; margin-top: 43px; left: 10%;">
+
+            <h3 style="float: right; margin-top: 43px; margin-left: 22%; position: absolute; color: white;">Graph</h3>
+        </div>
+        <div style="background: linear-gradient(to top, #36517a, #44608b) !important;">
+            <img src="img/Detail%20icon.png"
+                 style="float: left; width: 27px; height: 27px; position: absolute; margin-top: 43px; left: 60%;">
+
+            <h3 style="float: right; margin-top: 43px; margin-left: 22%; position: absolute; color: white;">Details</h3>
+        </div>
+    </div>
+
+</div>
+
 </body>
 </html>

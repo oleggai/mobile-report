@@ -78,7 +78,7 @@ body {
 
 .elem-list {
     width: 100%;
-    height: 135px;
+    height: 130px;
 }
 
 .elem-list img {
@@ -114,6 +114,8 @@ body {
     border: 1px solid white;
     text-align: center;
     background-color: black;
+    position: fixed;
+    height: 60px;
 }
 .header h2 {
     color: white;
@@ -145,14 +147,31 @@ body {
 
 .table-div {
     width: 100%;
-    min-height: 350px;
+    min-height: 750px;
     max-height: 350px;
+    /*height: 50%;*/
+    display: block !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-bottom: 6%;
+}
+
+.filter-table-div {
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
     display: block !important;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
 .table-header {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to top, #2f496f, #223a5e);
+}
+
+.filter-table-header {
     width: 100%;
     height: 40px;
     background: linear-gradient(to top, #2f496f, #223a5e);
@@ -166,12 +185,28 @@ body {
     border-right: 1px solid #354f77;
 }
 
+.filter-table-header div {
+    height: 100%;
+    float: left;
+    display: inline-block;
+    border-bottom: 1px solid #354f77;
+    border-right: 1px solid #354f77;
+}
+
 .table-header div:nth-child(1) {
     width: 40%;
+}
+.filter-table-header div:nth-child(1) {
+    width: 49.5%;
 }
 .table-header div:nth-child(2) {
     width: 40%;
 }
+
+.filter-table-header div:nth-child(2) {
+    width: 49.5%;
+}
+
 .table-header div:nth-child(3) {
     width: 18%;
  }
@@ -183,25 +218,86 @@ body {
     position: absolute;
     top: 42px;
 }
+
+.filter-table-header div h3 {
+    color: white;
+    position: absolute;
+    top: 42px;
+}
+
 .bottom-orders {
     bottom: 0;
     min-height: 100px;
 }
 
+.bottom-filters {
+    min-height: 100px;
+    width: 100%;
+
+}
+
 .bottom-orders div {
-    width: 49%;
+    width: 49.5%;
     height: 100px;
     float: left;
     display: inline-block;
     background: linear-gradient(to top, #36517a, #44608b);
-    border: 1px solid #4b6998;
+/*    background-color: #36517a !important;
+    border-right: 1px solid #4b6998;*/
+   /* background-color: #2D476D !important;*/
+}
+
+.bottom-orders div:nth-child(2) {
+    background: linear-gradient(to bottom, #36517a, #44608b) !important;
+}
+
+.bottom-filters div {
+    width: 45%;
+    height: 50px;
+    margin-top: 20px;
+    float: left;
+    display: inline-block;
+    background: linear-gradient(to top, #36517a, #44608b);
+}
+.bottom-filters div:nth-child(2) {
+    float: right;
+    margin-right: 2%;
+}
+
+.filter-button {
+    width: 48.5% !important;
+    margin: 0 !important;
+    display: inline-block;
+    text-align: center;
+}
+
+.filter-button h4 {
+    color: white;
+    margin-top: 13px;
+}
+
+.bottom-filters div:nth-child(1) {
+    float: left;
+    margin-left: 2%;
 }
 
 .order-table {
     width: 100%;
     height: 30px;
 }
+.filter-table {
+    width: 100%;
+    height: 30px;
+}
 .order-table div {
+    background: linear-gradient(to top, #36517a, #44608b);
+    border-bottom: 1px solid #354f77;
+    border-right: 1px solid #354f77;
+    height: 50px;
+    display: inline-block;
+    float: left;
+}
+.filter-table div {
     background: linear-gradient(to top, #36517a, #44608b);
     border-bottom: 1px solid #354f77;
     border-right: 1px solid #354f77;
@@ -216,6 +312,19 @@ body {
     margin-top: 14px;
 }
 
+.filter-table div h4 {
+    color: white;
+    float: left;
+    margin-top: 14px;
+}
+
+.filter-table div:nth-child(1) {
+    width: 49.5%;
+}
+.filter-table div:nth-child(2) {
+    width: 49.5%;
+}
+
 .order-table div:nth-child(1) {
     width: 40%;
 }
@@ -224,4 +333,68 @@ body {
 }
 .order-table div:nth-child(3) {
     width: 18%;
+}
+
+
+.category {
+    width: 32.4%;
+    text-align: center;
+    display: inline-block;
+    float: left;
+}
+
+.category img {
+    width: 90px;
+    height: 90px;
+}
+
+.border-radius {
+    border-radius: 50px 50px 50px 50px;
+}
+.border-radius-left {
+    border-radius: 50px 0 0 50px;
+}
+
+.border-radius-right {
+    border-radius: 0 50px 50px 0;
+}
+
+
+.div-date {
+    width: 90%;
+    left: 5%;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+    bottom: 0;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: inset 0 0 15px 3px #808080;
+    background-color: #D7DBE1;
+    border: 1px solid;
+}
+
+.div-date-record {
+    width: 100%;
+    height: 40px;
+}
+
+.div-date-record div {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    text-align: center;
+    color: #365078;
+}
+
+.div-date-record div:nth-child(1) {
+    width: 20%;
+}
+.div-date-record div:nth-child(2) {
+    width: 58%;
+}
+.div-date-record div:nth-child(3) {
+    width: 20%;
 }
